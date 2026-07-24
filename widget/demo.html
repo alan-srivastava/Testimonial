@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+  demo.html
+  This simulates a THIRD-PARTY website embedding our widget.
+  It has nothing to do with our React app - it's plain HTML,
+  proving the widget works anywhere, not just inside our own app.
+
+  To try it: make sure the backend is running on port 4000, then just
+  open this file directly in a browser (double-click it, or use the
+  VS Code "Live Server" extension).
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Acme Corp — Customer Reviews (Demo Third-Party Site)</title>
+  <style>
+    body { font-family: Georgia, serif; max-width: 800px; margin: 60px auto; padding: 0 20px; color: #222; }
+    h1 { font-family: -apple-system, sans-serif; }
+    header { border-bottom: 3px solid #4f46e5; padding-bottom: 16px; margin-bottom: 32px; }
+    .note { background: #fffbea; border: 1px solid #f0d878; padding: 12px 16px; border-radius: 8px;
+      font-family: -apple-system, sans-serif; font-size: 0.85rem; margin-bottom: 32px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Acme Corp</h1>
+    <p>We make things people love. Here's what they're saying:</p>
+  </header>
+
+  <div class="note">
+    This page represents an external, unrelated website embedding our testimonial widget
+    via a single &lt;div&gt; + &lt;script&gt; tag — proving it works outside our own app.
+  </div>
+
+  <!-- This is the entire embed: one div + one script tag -->
+  <div id="testimonial-widget" data-api="http://localhost:4000" data-accent="#4f46e5"></div>
+  <script src="http://localhost:4000/widget.js"></script>
+
+</body>
+</html>

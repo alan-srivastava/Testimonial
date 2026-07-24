@@ -1,14 +1,8 @@
-// routes/testimonials.js
-// All the API endpoints for testimonials live here.
-// Express Router lets us keep routes separate from server.js (server.js just "mounts" this file).
-
 import { Router } from "express";
 import db from "../db/db.js";
 
 const router = Router();
 
-// ---- POST /api/testimonials ----
-// Public submission form calls this. Creates a new testimonial with status "pending".
 router.post("/", (req, res) => {
   const { name, email, company, message, rating, photo_url } = req.body;
 
@@ -39,8 +33,6 @@ router.post("/", (req, res) => {
   res.status(201).json(created);
 });
 
-// ---- GET /api/testimonials ----
-// Used by the dashboard (all statuses) and by the public wall (?status=approved).
 router.get("/", (req, res) => {
   const { status } = req.query;
 
@@ -54,8 +46,6 @@ router.get("/", (req, res) => {
   res.json(rows);
 });
 
-// ---- PATCH /api/testimonials/:id ----
-// Dashboard calls this to approve or reject a submission.
 router.patch("/:id", (req, res) => {
   const { id } = req.params;
   const { status } = req.body;
@@ -74,8 +64,7 @@ router.patch("/:id", (req, res) => {
   res.json(updated);
 });
 
-// ---- DELETE /api/testimonials/:id ----
-// Optional: lets the dashboard permanently delete junk/spam submissions.
+
 router.delete("/:id", (req, res) => {
   const { id } = req.params;
   const existing = db.prepare("SELECT * FROM testimonials WHERE id = ?").get(id);

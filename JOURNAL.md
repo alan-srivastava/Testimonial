@@ -2,7 +2,7 @@
 
 Started with P0 in order: DB schema first, then the API routes, then server.js to wire it together, tested each endpoint with curl before writing any frontend code against it. Only after the backend was confirmed working did I move to connecting it to the frontend and testing the full submit → approve → wall flow.
 After P0 was solid, moved to P1: built the embeddable widget (widget.js) and the demo.html page proving it works on a page outside the app.
-Deployed after P0+P1 were both verified working locally — backend to Render, frontend to Vercel — so I'd have a live link to submit even if I ran out of time for the P2 stretch feature.
+Deployed after P0+P1 were both verified working locally backend to Render, frontend to Vercel so I'd have a live link to submit even if I ran out of time for the P2 stretch feature.
 
 What I cut pagination, duplicate detection, the P2 AI feature.
 

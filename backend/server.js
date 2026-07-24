@@ -1,6 +1,3 @@
-// server.js
-// Entry point for the backend. Run with: npm run dev (from the backend folder)
-
 import express from "express";
 import cors from "cors";
 import path from "path";

@@ -1,6 +1,9 @@
 # Testimonial Platform
+
 Vercel Deployed(frontend): https://testimonial-navy.vercel.app/
+
 Render Deployed(Backend)
+
 A small testimonial collection tool: customers submit reviews, the business owner
 approves/rejects them from a dashboard, and approved ones appear on a public wall
 and an embeddable widget for third-party sites.

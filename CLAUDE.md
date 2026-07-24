@@ -1,6 +1,6 @@
 # Project context for AI coding agents
 
-This file steers Claude Code / Cursor / other agents working in this repo.
+This file steers Claude Code.
 
 ## What this is
 A small testimonial platform: submission form -> moderation dashboard -> public wall

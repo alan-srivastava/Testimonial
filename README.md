@@ -1,5 +1,6 @@
 # Testimonial Platform
-
+Vercel Deployed(frontend): https://testimonial-navy.vercel.app/
+Render Deployed(Backend)
 A small testimonial collection tool: customers submit reviews, the business owner
 approves/rejects them from a dashboard, and approved ones appear on a public wall
 and an embeddable widget for third-party sites.
@@ -56,13 +57,13 @@ With the backend still running, open `widget/demo.html` directly in your browser
 - [x] Embeddable widget (`<div> + <script>`) with a working third-party demo page
 - [x] Widget accent color customization via `data-accent`
 - [x] Loading / empty / error states on wall, dashboard, and widget
+- [x] Deployed on vercel 
 
 ## What's not done / cut
 
 - No pagination (fine at small scale; would add cursor-based pagination if the wall grew large)
 - No duplicate/spam detection beyond basic input validation
 - No AI-powered feature (P2) — see JOURNAL.md for reasoning on what was prioritized instead
-- Not deployed to a live host — runs locally only
 
 ## Project structure
 
